@@ -126,25 +126,25 @@ blockquote:before{
 }
 .pci{
     display:inline;
-    @include sp{
+    @mixin sp{
         display:none;
     }
 }
 .spi{
     display:none;
-    @include sp{
+    @mixin sp{
         display:inline;
     }
 }
 .pc{
     display:block;
-    @include sp{
+    @mixin sp{
         display:none;
     }
 }
 .sp{
     display:none;
-    @include sp{
+    @mixin sp{
         display:block;
     }
 }

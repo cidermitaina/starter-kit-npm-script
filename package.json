@@ -1,58 +1,42 @@
 {
   "name": "starter-kit",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "author": "",
+  "description": "",
+  "license": "ISC",
   "scripts": {
-    "start": "npm run watchify -- -w & npm run build:css -- -w & npm run serve",
-    "serve": "browser-sync start --server ./public/ --port 3000 --files='./public/**/*.html, ./public/assets/**/*'",
-    "build:css": "node-sass src/scss/index.scss public/assets/css/index.css",
-    "build:js": "browserify src/js/main.js -t babelify --outfile public/assets/js/bundle.js",
+    "start": "npm-run-all -p postcss watchify server",
+    "server": "browser-sync start --server ./public/ --port 3000 --files \"./public/**/*.html,./public/assets/css/style.css,./public/assets/js/bundle.js\"",
+    "postcss": "postcss --config config/postcss.json -o ./public/assets/css/style.css ./src/css/style.css -w",
     "watchify": "watchify ./src/js/main.js -o ./public/assets/js/bundle.js -v wait;"
   },
-  "author": "",
-  "license": "ISC",
   "browserify": {
     "transform": [
-      "browserify-shim"
+      "babelify"
     ]
   },
-  "browser": {
-    "jquery": "./node_modules/jquery/dist/jquery.js"
-  },
-  "browserify-shim": {
-    "jquery": "$"
-  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babelify": "^8.0.0",
-    "browser-sync": "^2.18.6",
-    "browserify": "^14.5.0",
-    "browserify-shim": "^3.8.14",
-    "exorcist": "^1.0.0",
-    "glob": "^7.1.1",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-data": "^1.2.1",
-    "gulp-ejs": "^3.0.0",
-    "gulp-frontnote": "^2.0.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.1.2",
-    "gulp-watch": "^4.3.11",
-    "imagemin-jpegtran": "^5.0.2",
-    "imagemin-optipng": "^5.2.1",
+    "autoprefixer": "^6.5.4",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.5",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.9.1",
     "jquery": "^1.11.3",
-    "mkdirp": "^0.5.1",
-    "node-sass": "^4.7.1",
-    "uglify-js": "^3.1.9",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.9.0"
-  },
-  "dependencies": {
-    "fs": "0.0.1-security"
+    "lodash": "^4.17.2",
+    "moment": "^2.17.1",
+    "npm-run-all": "^4.1.2",
+    "postcss-assets": "^4.1.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-discard-comments": "^2.0.4",
+    "postcss-import": "^9.1.0",
+    "postcss-scss": "^0.4.0",
+    "postcss-utilities": "^0.6.1",
+    "precss": "^1.4.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "watchify": "^3.8.0"
   }
 }

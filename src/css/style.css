@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/*foundation*/
+@import "foundation/initialize.css";
+@import "foundation/properties.css";
+@import "foundation/mixin.css";
+@import "foundation/init.css";
+@import "foundation/util.css";
+/*layout*/
+@import "layout/header.css";
+@import "layout/footer.css";
+/*layout*/
+
+h1{
+    font-size: 30px;
+    padding: 200px 2px 300px;
+    text-align: center;
+    @mixin sp{
+        font-size: 12px;
+    }
+}
+.wrapper{
+    width: 90%;
+    margin: 2% auto;
+}
