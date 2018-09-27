@@ -1,6 +1,6 @@
 {
   "name": "starter-kit",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "index.js",
   "author": "",
   "description": "",
@@ -18,16 +18,17 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.5.4",
+    "axios": "^0.18.0",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-polyfill": "^6.20.0",
     "babel-preset-es2015": "^6.18.0",
     "babelify": "^7.3.0",
-    "browser-sync": "^2.18.5",
+    "browser-sync": "^2.23.6",
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.9.1",
     "jquery": "^1.11.3",
-    "lodash": "^4.17.2",
-    "moment": "^2.17.1",
+    "lodash": "^4.17.5",
+    "moment": "^2.20.1",
     "npm-run-all": "^4.1.2",
     "postcss-assets": "^4.1.0",
     "postcss-cli": "^2.6.0",
@@ -37,6 +38,7 @@
     "postcss-utilities": "^0.6.1",
     "precss": "^1.4.0",
     "pug-cli": "^1.0.0-alpha6",
+    "superagent": "^3.8.2",
     "watchify": "^3.8.0"
   }
 }
