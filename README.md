@@ -11,4 +11,4 @@ npm-scriptを使ったフロントエンド開発環境
 - windows環境でも使用できるようにnpm-run-allをinstall
 - css:FLOCSSに変更
 
-## 2020.02.16
+## 2020.02.16(sun)
